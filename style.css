@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #001f3f;
+  color: #f5f5dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #f5f5dc;
+  color: #001f3f;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #e0e0c0;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.coracao {
+  position: fixed;
+  font-size: 2.5rem;
+  animation: flutuar 3s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+  color: #ffb6c1;
+}
+
+.coracao:nth-child(2) { top: 10%; left: 20%; animation-delay: 0s; }
+.coracao:nth-child(3) { top: 30%; left: 70%; animation-delay: 0.5s; }
+.coracao:nth-child(4) { top: 50%; left: 40%; animation-delay: 1s; }
+.coracao:nth-child(5) { top: 70%; left: 60%; animation-delay: 1.5s; }
+.coracao:nth-child(6) { top: 85%; left: 30%; animation-delay: 2s; }
